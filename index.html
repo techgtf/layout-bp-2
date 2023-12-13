@@ -12,6 +12,11 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <style>
+        .bannerForm .inputbox{position: relative;}
+        .bannerForm .invalid-data.existingCheck, 
+        .form-floating .invalid-data.existingCheck{position: absolute;top: 100%;z-index: 1;box-shadow: 1px 1px 5px rgb(169 169 169);left: 0;right: 0;border-radius: 8px 0;font-size: 14px;padding: 8px;}
+    </style>
 </head>
 
 <!-- wmic path softwarelicensingservice get OA3xOriginalProductKey OA3xOriginalProductKey -->
@@ -93,11 +98,11 @@
             <h4 class="heading gradient NovaSquareFont text-uppercase d-flex align-items-center"><img
                     src="assets/images/icons/email.svg" alt="" style="filter: invert(1);"> Submit Your Queries</h4>
             <div class="flexdiv d-flex justify-content-between">
-                <div class="inputbox"><input class="w-100" type="text" placeholder="Your Name"></div>
-                <div class="inputbox"><input class="w-100" type="email" placeholder="Your Email Address"></div>
-                <div class="inputbox"><input class="w-100" type="number" placeholder="Your Mobile Number"></div>
-                <div class="inputbox"><input class="w-100" type="text" placeholder="Your Message"></div>
-                <button class="appbtn gradient text-uppercase">Submit Now</button>
+                <div class="inputbox"><input class="w-100" type="text" placeholder="Your Name" id="qSenderName"></div>
+                <div class="inputbox"><input class="w-100" type="email" placeholder="Your Email Address" id="qEmailID"></div>
+                <div class="inputbox"><input class="w-100" type="number" placeholder="Your Mobile Number" id="qMobileNo"></div>
+                <div class="inputbox"><input class="w-100" type="text" placeholder="Your Message" id="qMessage"></div>
+                <button class="appbtn gradient text-uppercase" id="SubmitQuery">Submit Now</button>
             </div>
         </div>
     </section>
@@ -402,11 +407,11 @@
                     <p class="text-center">Your Next Step to Success: Contact Us Now</p>
                 </div>
                 <div class="flexfields row justify-content-between">
-                    <input class="col-md-6 w-100" type="text" placeholder="Your Name">
-                    <input class="col-md-6 w-100" type="number" placeholder="Your Mobile Number">
-                    <input class="col-md-6 w-100" type="email" placeholder="Your Email Address">
-                    <input class="col-md-6 w-100" type="text" placeholder="Your Message">
-                    <button class="appbtn gradient m-auto">Send Your Message</button>
+                    <input class="col-md-6 w-100" type="text" placeholder="Your Name" id="qSenderName1">
+                    <input class="col-md-6 w-100" type="number" placeholder="Your Mobile Number" id="qMobileNo1">
+                    <input class="col-md-6 w-100" type="email" placeholder="Your Email Address" id="qEmailID1">
+                    <input class="col-md-6 w-100" type="text" placeholder="Your Message" id="qMessage1">
+                    <button class="appbtn gradient m-auto" id="SubmitQuery1">Send Your Message</button>
                 </div>
             </div>
             <div class="contentdiv w-100-mb">
@@ -453,38 +458,38 @@
           <div class="modal-content">
             <div class="flexdiv d-flex justify-content-between">
                 <h3 class="modal-head NovaSquareFont ">Demo Project</h3>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" style="font-size: 35px; filter: brightness(7.5) hue-rotate(102deg);">❌</span></button>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="position: absolute; right: 15px;"><span aria-hidden="true" style="font-size: 35px; filter: brightness(7.5) hue-rotate(102deg);">❌</span></button>
             </div>
             <p class="modal-para" style="text-transform: capitalize;">Project Location Here... </p>
             <div class="banner-form-section" autocomplete="off">
                 <div class="row">
                     <div class="col-sm-12">
-                        <div class="form-floating mb-3">
-                            <input class="form-control" type="text" id="name_contact" name="name_contact" placeholder="Your Name">                            
+                        <div class="form-floating mb-3" style="position: relative;">
+                            <input class="form-control" type="text" id="qSenderNamemodal" name="name_contact" placeholder="Your Name">                            
                         </div>
                     </div>
                     <div class="col-sm-12">
-                        <div class="form-floating mb-3">
-                            <input class="form-control" type="text" id="phone_contact" name="phone_contact" placeholder="Your Mobile Number">                            
+                        <div class="form-floating mb-3" style="position: relative;">
+                            <input class="form-control" type="text" id="qMobileNomodal" name="phone_contact" placeholder="Your Mobile Number">                            
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-12">
-                        <div class="form-floating mb-3">
-                            <input class="form-control" type="email" id="email_contact" name="email_contact" placeholder="Your Email Address">
+                        <div class="form-floating mb-3" style="position: relative;">
+                            <input class="form-control" type="email" id="qEmailIDmodal" name="email_contact" placeholder="Your Email Address">
                         </div>
                     </div>
                     <div class="col-sm-12">
-                        <div class="form-floating mb-3">
-                            <input class="form-control" placeholder="Message" id="message_contact" name="message_contact">
+                        <div class="form-floating mb-3" style="position: relative;">
+                            <input class="form-control" placeholder="Message" id="qMessagemodal" name="message_contact">
                         </div>
                     </div>
                 </div>
                 <!-- <p style="font-weight: 400;color: #000;opacity: 1;font-size:11px;letter-spacing: 0.5px;margin:0;line-height:15px; margin-top:12px;"><input type="checkbox" id="checkboxx" checked="" name="subscribe" value="check"> I authorize company representatives to Call, SMS, Email or WhatsApp me about its products and offers. This consent overrides any registration for DNC/NDNC.</p> -->
                 <div class="row">
                     <div class="col-md-12 mb-2">
-                        <button class="appbtn gradient w-100">submit</button>
+                        <button class="appbtn gradient w-100" id="SubmitQuerymodal">submit</button>
                     </div>
                 </div>
             </div>
@@ -568,28 +573,6 @@
                 "SenderControlMobileID": "qMobileNo1",
                 "SenderControlEmailID": "qEmailID1",
                 "SenderControlMsgID": "qMessage1"
-            };
-
-            SubmitQueryData(AgentInfo, FormInfo);
-        });
-
-        $("#SubmitQuery2").click(function () {
-            var FormInfo = {
-                "SenderControlID": "qSenderName2",
-                "SenderControlMobileID": "qMobileNo2",
-                "SenderControlEmailID": "qEmailID2",
-                "SenderControlMsgID": "qMessage2"
-            };
-
-            SubmitQueryData(AgentInfo, FormInfo);
-        });
-
-        $("#SubmitQuery3").click(function () {
-            var FormInfo = {
-                "SenderControlID": "qSenderName3",
-                "SenderControlMobileID": "qMobileNo3",
-                "SenderControlEmailID": "qEmailID3",
-                "SenderControlMsgID": "qMessage3"
             };
 
             SubmitQueryData(AgentInfo, FormInfo);
