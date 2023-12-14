@@ -19,9 +19,6 @@
     </style>
 </head>
 
-<!-- wmic path softwarelicensingservice get OA3xOriginalProductKey OA3xOriginalProductKey -->
-
-
 <body>
     <div class="overlay"></div>
     <!---------------- Menu Section Codes Start From Here --------------->
@@ -67,7 +64,7 @@
                     <img class="sliderimg d-block w-100" src="assets/images/slider-banner/banner2.jpg" alt="">
                 </div>
                 <div class="carousel-item">
-                    <img class="sliderimg d-block w-100" src="assets/images/slider-banner/banner.jpg" alt="">
+                    <img class="sliderimg d-block w-100" src="assets/images/slider-banner/banner2.jpg" alt="">
                 </div>
             </div>
             <!-- <a class="carousel-control-prev" href="#bannerSliderControl" role="button" data-slide="prev">
@@ -376,19 +373,19 @@
                 </div>
                 <div class="rightimges col-lg-6">
                     <div class="imgbox" style="margin-bottom: 25px;">
-                        <a href="assets/images/gallery/g1.jpg" class="with-caption image-link" title="Gallery 2">
+                        <a href="assets/images/gallery/g2.jpg" class="with-caption image-link" title="Gallery 2">
                             <img src="assets/images/gallery/g2.jpg" alt="" loading="lazy">
                         </a>
                     </div>
                     <div class="imgbox">
-                        <a href="assets/images/gallery/g1.jpg" class="with-caption image-link" title="Gallery 3">
+                        <a href="assets/images/gallery/g3.jpg" class="with-caption image-link" title="Gallery 3">
                             <img src="assets/images/gallery/g3.jpg" alt="" loading="lazy">
                         </a>
                     </div>
                 </div>
                 <div class="rightimg col-md-3">
                     <div class="imgbox">
-                        <a href="assets/images/gallery/g1.jpg" class="with-caption image-link" title="Gallery 4">
+                        <a href="assets/images/gallery/g4.jpg" class="with-caption image-link" title="Gallery 4">
                             <img src="assets/images/gallery/g4.jpg" alt="" loading="lazy">
                         </a>
                     </div>
@@ -415,7 +412,7 @@
                 </div>
             </div>
             <div class="contentdiv w-100-mb">
-                <h6 class="projectname NovaSquareFont">DEMO PROJECT</h6>
+                <h6 class="projectname NovaSquareFont text-uppercase">About Builder</h6>
                 <cutom-h7 class="projlocation">Project Location Here...</cutom-h7>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat pariatur minima aut ab doloremque tempore, suscipit quod, ullam nam sequi tempora neque voluptate at corporis accusantium! Dolorum earum quod ipsum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat pariatur minima aut ab doloremque tempore, suscipit quod, ullam nam sequi tempora neque voluptate at corporis accusantium! Dolorum earum quod ipsum!</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat pariatur minima aut ab doloremque tempore, suscipit quod, ullam nam sequi tempora neque voluptate at corporis accusantium! Dolorum earum quod ipsum!</p>
@@ -436,7 +433,7 @@
                 <p>RERA NO: ***********</p>
             </div>
             <div class="gtfdiv d-flex justify-content-center flex-wrap-mb">
-                <a href="#">Disclaimer & Privacy Policy</a>
+                <a href="/Disclaimer.html">Disclaimer & Privacy Policy</a>
                 <p>Digital Media Planned By <a href="http://www.gtftechnologies.com/" target="_blank"> GTF Technologies</a> <a href="https://www.google.com/partners/agency?id=6096246672" target="_blank"></a></p>
             </div>
         </div>
@@ -525,15 +522,24 @@
             $(".AppNavbar").removeClass("active")
             $(".overlay").removeClass("active")
         })
-    </script>
-
-    <script>
+       
         $(".reamoredbtn").click(function(){
             $(".moretext").slideToggle("slow");
             if($(this).text()=="Read More") $(this).text("Read Less")
             else $(this).text("Read More");
         });
+
+        $('.AppNavbar .navlinks').on('click',function (e) {
+            var target = this.hash,
+            $target = $(target);
+            $('html, body').stop().animate({
+                'scrollTop': $target.offset().top-50
+            }, 100, 'swing', function () {
+                window.location.hash = target;
+            });
+        });
     </script>
+
 
     <script type="text/javascript" language="javascript">
         var versionUpdate = (new Date()).getTime();
