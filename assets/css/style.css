@@ -144,7 +144,7 @@ button{cursor: pointer;}
 .amenities-container .container .desc{margin-bottom: 25px; text-align: justify;letter-spacing: 1px;}
 .amenities-container .rightsider{width: 53%; gap: 25px; position: sticky; top: 0;}
 .amenities-container .rightsider .boxes{padding: 25px;margin-bottom: 44px;}
-.amenities-container .am_name{font-size: 18px; text-transform: uppercase; font-weight: 600; margin-top: 15px; white-space: nowrap; text-overflow: ellipsis;overflow: hidden;}
+.amenities-container .am_name{font-size: 18px; text-transform: uppercase; font-weight: 600; margin-top: 15px;}
 .amenities-container .icondiv img{height: 130px;width: 350px;}
 /*Amenities Codes End From Here*/
 
@@ -251,7 +251,7 @@ button{cursor: pointer;}
     .amenities-container {padding: 10px 0;}
     .amenities-container .container .desc {letter-spacing: 1px;font-size: 14px;}
     .amenities-container .rightsider .boxes {padding: 0;}
-    .amenities-container .am_name{font-size: 13px;}
+    .amenities-container .am_name{font-size: 11px;}
     .amenities-container .icondiv img {height: 104px;width: 91px;}
     .floorplan-container .aprtementtype {font-size: 36px;}
     .floorplan-container .desc {margin-bottom: 14px;font-size: 15px;}
@@ -356,8 +356,8 @@ button{cursor: pointer;}
     .amenities-container .container .desc {letter-spacing: 0.3px;text-align: start;}
     .amenities-container .leftside{margin-bottom: 25px;}
     .amenities-container .rightsider{display: block !important;}
-    .amenities-container .boxesleft, .amenities-container .boxescenter, .amenities-container .boxesright{display: flex; flex-wrap: wrap; justify-content: center; gap: 0 15px;}
-    .amenities-container .rightsider .boxes{margin-bottom: 10px;}
+    .amenities-container .boxesleft, .amenities-container .boxescenter, .amenities-container .boxesright{display: flex;flex-wrap: wrap;justify-content: space-evenly;gap: unset;padding: 5px 0px;}
+    .amenities-container .rightsider .boxes{margin-bottom: 10px;width: 48%;}
     .amenities-container .icondiv img {height: 58px;width: 61px;}
 
     /* floorplan-container */
